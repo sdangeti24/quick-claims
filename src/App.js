@@ -3,19 +3,29 @@ import './App.css';
 import NewClaim from './NewClaim';
 import "./Header.css"
 import SearchClaim from './SearchClaim';
+import TransactionsTable from './Data/TransactionsTable';
 
 
 function App() {
   const [isNCShown, setIsNCShown] = useState(false);
   const [isSCShown, setIsSCShown] = useState(false);
+  const [isOCShown, setIsOCShown] = useState(false);
   const newClmClick = event => {
     setIsNCShown(true);
     setIsSCShown(false);
+    setIsOCShown(false);
   };
   const srchClmClick = event => {
     setIsNCShown(false);
     setIsSCShown(true);
+    setIsOCShown(false);
   };
+  const openClmClick = event => {
+    setIsNCShown(false);
+    setIsSCShown(false);
+    setIsOCShown(true);
+  };
+
   return (
     <div className="App">
       <div className="header">
@@ -26,7 +36,7 @@ function App() {
                 <span className="spanNewClaim" onClick={newClmClick}>NEW CLAIM</span>
             </div>
             <div className="headerOpenClaim">
-                <span className="spanOpenClaim">OPEN CLAIM</span>
+                <span className="spanOpenClaim" onClick={openClmClick}>OPEN CLAIM</span>
             </div>
             <div className="headerSearchClaims">
                 <span className="spanSearchClaims" onClick={srchClmClick}>SEARCH CLAIMS</span>
@@ -37,6 +47,7 @@ function App() {
         </div>
       {isNCShown && (<NewClaim />) }
       {isSCShown && (<SearchClaim />)}
+      {isOCShown && (<TransactionsTable />)}
     </div>
   );
 }

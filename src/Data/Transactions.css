@@ -1,0 +1,17 @@
+.transactionsTable {
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    margin-top: -180px;
+    margin-left: -180px;
+    margin-right: auto;
+    border: 1px solid #999;
+    border-collapse: collapse;
+    background-color: antiquewhite;     
+}
+
+.transactionsTable td, .transactionsTable th {
+    padding: 3px;
+    border: 1px solid #999;
+}
+
