@@ -4,12 +4,15 @@ import NewClaim from './NewClaim';
 import "./Header.css"
 import SearchClaim from './SearchClaim';
 import TransactionsTable from './Data/TransactionsTable';
+import { PolicyDetail } from './Data/PolicyDetail';
+
 
 
 function App() {
   const [isNCShown, setIsNCShown] = useState(false);
   const [isSCShown, setIsSCShown] = useState(false);
   const [isOCShown, setIsOCShown] = useState(false);
+  // const [isPDShown, setIsPDShown] = useState(false);
   const newClmClick = event => {
     setIsNCShown(true);
     setIsSCShown(false);
@@ -26,6 +29,7 @@ function App() {
     setIsOCShown(true);
   };
 
+  
   return (
     <div className="App">
       <div className="header">
@@ -48,6 +52,8 @@ function App() {
       {isNCShown && (<NewClaim />) }
       {isSCShown && (<SearchClaim />)}
       {isOCShown && (<TransactionsTable />)}
+      {/* {isPDShown && (<PolicyDetail />) } */}
+      {/* <PolicyDetail /> */}
     </div>
   );
 }

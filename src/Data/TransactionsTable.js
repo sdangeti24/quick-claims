@@ -6,7 +6,7 @@ import { getAllClaims } from "./DataFunctions";
 const TransactionsTable = () => {
 
     const claims = getAllClaims();
-    console.log(claims);
+    //console.log(claims);
 
 
 return (

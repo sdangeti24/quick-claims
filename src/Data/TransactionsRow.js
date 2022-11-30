@@ -1,3 +1,5 @@
+import { PolicyDetail } from "./PolicyDetail";
+
 const TransactionsRow = (props) => {
 
     return (
@@ -7,9 +9,11 @@ const TransactionsRow = (props) => {
             <td>{props.date}</td>
             <td>{props.policyno}</td>
             <td>{props.status}</td>
-            <button>{props.policyno}</button>
+            <button type="button" id={"props.policyno"} onClick={() => { PolicyDetail(props.policyno) }}>{props.policyno}</button>
         </tr>
     )
 }
+
+
 
 export default TransactionsRow;
