@@ -36,6 +36,7 @@ const SearchClaim = () =>
                 <th>Date</th>
                 <th>Policy Number</th>
                 <th>Status</th>
+                <th>Policy Details</th>
             </tr>
         </thead>
         <tbody>

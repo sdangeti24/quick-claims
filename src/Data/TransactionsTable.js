@@ -14,23 +14,26 @@ return (
         <div className="mainHeader"><h1> Open Claims</h1></div>
     <table className="transactionsTable" id="transactionsTable">
         <thead>
-            <tr>
+            <tr> 
                 <th>Claim Number</th>
                 <th>Amount</th>
                 <th>Date</th>
                 <th>Policy Number</th>
                 <th>Status</th>
+                <th>Policy Details</th>
             </tr>
         </thead>
         <tbody>
             {claims.map(
                             (claim, index) => 
                             {
-                                return claim.status === "open" && <TransactionsRow key={index} claimnum={claim.claimnum} date={claim.date}
-                                amount = {claim.amount} policyno ={claim.policyno} status={claim.status}   />
+                                return claim.status === "open" && (<TransactionsRow key={index} claimnum={claim.claimnum} date={claim.date}
+                                amount = {claim.amount} policyno ={claim.policyno} status={claim.status} />)
                             }
-            )
-                        }
+                        
+            ) } 
+                        
+            
         </tbody>
     </table>
   </div>

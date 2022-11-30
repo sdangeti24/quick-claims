@@ -7,6 +7,7 @@ const TransactionsRow = (props) => {
             <td>{props.date}</td>
             <td>{props.policyno}</td>
             <td>{props.status}</td>
+            <button>{props.policyno}</button>
         </tr>
     )
 }
