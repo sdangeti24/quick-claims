@@ -26,16 +26,19 @@
   
 
   .mainHeader1 {
-    margin-top: 300px;
-    margin-left: 600px;
+    position: relative;
+    margin-top: 450px;
+    margin-left: 100px;
 }
 .container1 {
+  position: relative;
     margin-top: 10px;
-    margin-left:440px
+    margin-left:100px
 }
 
 .bt1 {
-    margin-top: 10px;
-    margin-left:600px
+  position: relative;
+    margin-top: 20px;
+    margin-left:100px
 }
 
